@@ -1,44 +1,25 @@
-<?php
-session_start();
-$user = $_SESSION['user'] ?? null;
-if($user) {
-    echo "<h1>Xin chào {$_SESSION['user']['username']}</h1>";
-    echo "
-    <table>
-        <tr>
-            <td><a href='dangNhap.php?'> Dang Nhap</a></td>
-        </tr>
-        <tr>
-            <td><a href='chen.php?'> Them nhan vien</a></td>
-        </tr>
-        <tr>
-            <td><a href='capnhat.php?'> Cap nhat phong ban</a></td>
-        </tr>
-        <tr>
-            <td><a href='xoa.php?'> Xoa nhan vien</a></td>
-        </tr>
-        <tr>
-            <td><a href='xoatatca.php?'> Xoa nhieu nhan vien</a></td>
-        </tr>
-    </table>
-";
-}
-
-echo "
-    <table>
-        <tr>
-            <td><a href='dangNhap.php?'> Dang Nhap</a></td>
-        </tr>
-        <tr>
-            <td><a href='XemNhanVien.php?'> Xem nhan vien</a></td>
-        </tr>
-        <tr>
-            <td><a href='XemPhongBan.php?'> Xem phong ban</a></td>
-        </tr>
-        <tr>
-            <td><a href='timkiem.php?='> tim kiem</a></td>
-        </tr>
-    </table>
-";
-
-?>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hệ Thống Quản Lý Nhân Sự</title>
+</head>
+<!-- 
+  Bố cục frameset chia trang thành các phần:
+  - T1: Header (đầu trang)
+  - T2: Menu chức năng chính (bên trái)
+  - T3: Nội dung chính (ở giữa)
+  - T4: Thông tin phụ (bên phải)
+  - T5: Footer (chân trang)
+-->
+<frameset rows="80,*,60" border="0">
+  <frame name="T1" src="T1.php">
+  <frameset cols="220,*">
+    <!-- Frame T2 sẽ tải nội dung từ T2.php (menu chức năng) -->
+    <frame name="T2" src="menu.php">
+    <!-- Frame T3 là nơi hiển thị nội dung chính khi bạn nhấp vào các liên kết -->
+    <frame name="T3" src="T3.php">
+  </frameset>
+  <frame name="T5" src="T5.htm">
+</frameset>
+</html>
