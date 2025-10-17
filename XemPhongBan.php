@@ -10,12 +10,12 @@ $result = mysqli_query($link, $sql);
 if ($result) {
     echo '<table border="1" width="100%">';
     echo '<caption>Dữ liệu truy xuất từ bảng Phong ban</caption>';
-    echo '<tr><th>ID</th><th>Ho ten</th><th>IDPB</th><th>Dia Chi</th></tr>';
+    echo '<tr><th>ID</th><th>Ten</th><th>Mo ta</th><th>hanh dong</th></tr>';
 
     while ($row = mysqli_fetch_assoc($result)) {
         $maso      = htmlspecialchars($row['IDPB'] ?? '');
         $ten     = htmlspecialchars($row['TenPB'] ?? '');
-        $mota  = htmlspecialchars($row['Mota'] ?? '');
+        $mota  = htmlspecialchars($row['MoTa'] ?? '');
 
         echo "
         <tr>
