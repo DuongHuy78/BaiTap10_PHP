@@ -33,7 +33,9 @@ $user = $_SESSION['user'] ?? null;
                 <a href="xoa.php" target="T3" class="px-3 py-2 rounded-md text-gray-200 hover:bg-gray-700 transition-colors">Xoá nhân viên</a>
                 <a href="xoatatca.php" target="T3" class="px-3 py-2 rounded-md text-gray-200 hover:bg-gray-700 transition-colors">Xoá nhiều nhân viên</a>
             </nav>
-            
+        </div>
+    <?php endif; ?>
+        <div class="flex-grow">
             <hr class="border-gray-600 my-6">
 
             <h2 class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Xem Dữ Liệu</h2>
@@ -43,10 +45,10 @@ $user = $_SESSION['user'] ?? null;
                 <a href="timkiem.php" target="T3" class="px-3 py-2 rounded-md text-gray-200 hover:bg-gray-700 transition-colors">Tìm kiếm</a>
             </nav>
         </div>
-        
+    <?php if($user): ?>
         <!-- Nút Đăng xuất -->
         <div>
-             <a href="logout.php" target="T3" target="_top" class="block text-center w-full px-3 py-2 rounded-md bg-red-600 hover:bg-red-700 transition-colors">Đăng Xuất</a>
+             <a href="logout.php" target="_top" class="block text-center w-full px-3 py-2 rounded-md bg-red-600 hover:bg-red-700 transition-colors">Đăng Xuất</a>
         </div>
 
     <?php else: ?>

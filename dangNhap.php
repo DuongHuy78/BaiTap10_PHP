@@ -97,11 +97,6 @@ require_once 'utils.php';
                 </button>
             </div>
         </form>
-
-        <!-- Link quay lại -->
-        <div class="text-center">
-            <a href="index.php" class="text-sm text-blue-600 hover:underline">Quay lại trang chủ</a>
-        </div>
     </div>
 
 </body>
