@@ -34,3 +34,4 @@ if ($qr) {
 
 mysqli_close($link);
 ?>
+<p><a href="index.php">Quay lại</a></p>
